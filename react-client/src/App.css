@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #00007a;
+}
+
+.App-link {
+  color: #00007a;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar {
+  background-color: #ced5ff;
+  color: #00007a;
+}
+
+.jumbotron {
+  background: rgba(0, 0, 0, .5) url('../public/vector-banner.jpg');
+  color: #fff;
+  background-size: cover;
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  margin: 0;
+}
+
+.icon-container {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  background-color: #f1f4ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.p-header {
+  padding-left: auto;
+  padding-right: auto;
+}
+
+#cardResult {
+  margin: 10px;
+  width: 500px;
+}
+
+#bookingCard {
+  margin: 10px;
+  width: fit-content;
+}
+
+#rowResult {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#pResult {
+  width: 480px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#booked {
+  color: red;
+}
+
+#unbooked {
+  color: green;
+}
+
+button{
+  margin-top: 10px;
+}
