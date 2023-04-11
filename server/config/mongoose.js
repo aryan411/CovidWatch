@@ -12,7 +12,7 @@ module.exports = function () {
         });
 
     // Load the 'Task' model 
-    require('../app/models/booking.server.model');
+    require('../app/models/location.server.model');
 
     // Return the Mongoose connection instance
     return db;

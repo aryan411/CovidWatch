@@ -30,7 +30,7 @@ module.exports = function () {
     app.engine('html', require('ejs').renderFile);
 
     //for the website routes
-    require('../app/routes/tasks.server.routes.js')(app);
+    require('../app/routes/location.server.routes.js')(app);
 
     app.use(express.static('./public'));
     return app;

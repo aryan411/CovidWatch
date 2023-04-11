@@ -104,3 +104,14 @@
 button{
   margin-top: 10px;
 }
+
+.footer {
+  margin-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: gray;
+  justify-content: center;
+  align-items: center;
+  border-top: rgb(221, 221, 221) solid 0.5px;
+  border-bottom: rgb(221, 221, 221) solid 0.5px;
+}
