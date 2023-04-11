@@ -2,40 +2,31 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const LocationSchema = new Schema({
     name: {
-        type: String,
-        required: true
+        type: String
     },
     address: {
-        type: String,
-        required: true
+        type: String
     },
     city: {
-        type: String,
-        required: true
+        type: String
     },
     province: { 
-        type: String,
-        required: true
+        type: String
     },
     postalCode: {
-        type: String,
-        required: true
+        type: String
     },
     vaccineType: {
-        type: String,
-        required: true
+        type: String
     },
     available: {
-        type: Boolean,
-        required: true
+        type: Boolean
     },
     date: {
-        type: String,
-        required: true
+        type: String
     },
     time: {
-        type: String,
-        required: true
+        type: String
     }
 });
 module.exports = mongoose.model('Location', LocationSchema);
