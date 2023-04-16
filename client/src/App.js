@@ -24,6 +24,10 @@ import LocationList from './components/LocationList';
 import PreferredVaccineList from './components/PreferredVaccineList';
 import Confirmation from './components/Confirmation';
 import BookingForm from './components/BookingForm';
+import AddLocation from './components/AddLocation'
+import { AdminSignin } from './components/AdminSignin';
+import AdminSignup from './components/AdminSignup';
+import AdminControl from './components/AdminControl';
 function App() {
 
   return (
@@ -38,7 +42,10 @@ function App() {
                 {/* <Nav.Link className='ms-auto' as={Link} to="/home" >Home</Nav.Link> */}
                 <Nav.Link className='ms-auto' as={Link} to="/location-list" ><FontAwesomeIcon icon={faHouseChimneyMedical} /> Location List</Nav.Link>
                 <Nav.Link className='ms-auto' as={Link} to="/preferred-vaccine-list" ><FontAwesomeIcon icon={faSyringe} /> Preferred List</Nav.Link>
-                {/* <Nav.Link className='ms-auto' as={Link} to="/confirmation" >Confirmation Page</Nav.Link> */}
+                {/* <Nav.Link className='ms-auto' as={Link} to="/admin/add-location" >Add Location</Nav.Link> */}
+                <Nav.Link className='ms-auto' as={Link} to="/admin/signup" >signup</Nav.Link>
+                <Nav.Link className='ms-auto' as={Link} to="/admin/signin" >signin</Nav.Link>
+                <Nav.Link className='ms-auto' as={Link} to="/admin/control" >control</Nav.Link>
                 {/* <Nav.Link className='ms-auto' as={Link} to="/booking-form" >Booking Form</Nav.Link> */}
               </Nav>
             </Navbar.Collapse>
@@ -53,6 +60,11 @@ function App() {
             <Route path="preferred-vaccine-list" element={<PreferredVaccineList />} />
             <Route path="booking-form/:id" element={<BookingForm />} />
             <Route path="confirmation" element={<Confirmation />} />
+            <Route path="admin/signup" element={<AddLocation/>}/>
+            <Route path="admin/signup/:id" element={<AddLocation/>}/>
+            <Route path="admin/signin" element={<AdminSignin/>}/>
+            {/* <Route path="admin/signup" element={<AdminSignup/>}/> */}
+            <Route path="admin/control" element={<AdminControl/>}/>
           </Routes>
         </div>
 

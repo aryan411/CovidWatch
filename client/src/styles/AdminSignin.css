@@ -1,0 +1,92 @@
+.s-h1 {
+
+    text-align: center;
+
+    margin-top: 50px;
+
+}
+
+
+
+
+.signupForm {
+
+    background-color: #fff;
+
+    border: 1px solid #ced5ff;
+
+    border-radius: 5px;
+
+    width: 400px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+}
+
+
+
+
+.su-input {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin: 8px 0;
+
+    display: inline-block;
+
+    border: 1px solid #ccc;
+
+    box-sizing: border-box;
+
+    border-radius: 5px;
+
+}
+
+
+
+
+.su-button {
+
+    background-color: #00007a;
+
+    border: none;
+
+    color: #fff;
+
+    padding: 10px;
+
+    width: 100%;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+
+}
+
+
+
+
+button[type="submit"]:hover {
+
+    background-color: #1b1d34;
+
+}
+
+
+
+
+.error {
+
+    color: red;
+
+    margin-top: 10px;
+
+    text-align: center;
+
+}

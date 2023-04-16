@@ -4,58 +4,10 @@ import { Button, Table } from 'react-bootstrap';
 import { faSearch, faSyringe, faCalendarDays, faCircleCheck, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../App.css';
+import { useSelector } from 'react-redux';
 
 function PreferredVaccineList(props) {
-    const [locations, setLocations] = useState([
-        {
-            id: 1,
-            name: 'Clinic Center 1',
-            address: '1 Address St',
-            city: 'Toronto',
-            province: 'Ontario',
-            postalCode: '111 111',
-            vaccineType: 'Johnson & Johnson',
-            available: true,
-            date: '2023-04-15',
-            time: '10:00 AM',
-        },
-        {
-            id: 2,
-            name: 'Clinic Center 2',
-            address: '2 Address St',
-            city: 'Ajax',
-            province: 'Ontario',
-            postalCode: '222 222',
-            vaccineType: 'Moderna',
-            available: true,
-            date: '2023-04-15',
-            time: '10:00 AM',
-        },
-        {
-            id: 3,
-            name: 'Clinic Center 3',
-            address: '3 Address St',
-            city: 'Pickering',
-            province: 'Ontario',
-            postalCode: '333 333',
-            vaccineType: 'Pfizer',
-            available: true,
-            date: '2023-04-15',
-            time: '10:00 AM',
-        },
-        {
-            id: 4,
-            name: 'Clinic Center 3',
-            address: '3 Address St',
-            city: 'Pickering',
-            province: 'Ontario',
-            postalCode: '333 333',
-            vaccineType: 'Moderna',
-            available: false,
-            date: '2023-04-15',
-            time: '11:00 AM',
-        }
-    ]);
+    const locations = useSelector((state)=> state)
     const [selectedType, setSelectedType] = useState(null);
     let navigate = useNavigate();
 
@@ -97,17 +49,17 @@ function PreferredVaccineList(props) {
                 onSelect={handleTypeSelect}
             />
 
-            <div class="row" id="rowResult">
+            <div className="row" id="rowResult">
                 {filteredLocations.map((location) => (
-                    <div class="card" id="cardResult" key={location.id}>
-                        <div class="card-body">
-                            <h4 class="card-title">{location.name}</h4>
-                            <p class="card-text" id="pResult">{location.address}, {location.city}, {location.province}, {location.postalCode}</p>
+                    <div className="card" id="cardResult" key={location.id}>
+                        <div className="card-body">
+                            <h4 className="card-title">{location.name}</h4>
+                            <p className="card-text" id="pResult">{location.address}, {location.city}, {location.province}, {location.postalCode}</p>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><FontAwesomeIcon icon={faSyringe} /> {location.vaccineType}</li>
-                            <li class="list-group-item"><FontAwesomeIcon icon={faCalendarDays} /> {location.date} - {location.time}</li>
-                            <li class="list-group-item">{location.available ? (
+                        <ul className="list-group list-group-flush">
+                            <li className="list-group-item"><FontAwesomeIcon icon={faSyringe} /> {location.vaccineType}</li>
+                            <li className="list-group-item"><FontAwesomeIcon icon={faCalendarDays} /> {location.date} - {location.time}</li>
+                            <li className="list-group-item">{location.available ? (
                                 <div>
                                     <FontAwesomeIcon id='unbooked' icon={faCircleCheck} />
                                     <span className="ms-2">Available</span>
@@ -119,7 +71,7 @@ function PreferredVaccineList(props) {
                                 </div>
                             )}</li>
                         </ul>
-                        <div class="card-body">
+                        <div className="card-body">
                             <Button
                                 variant="dark"
                                 disabled={!location.available}
