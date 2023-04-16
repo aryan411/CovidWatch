@@ -46,6 +46,9 @@ function App() {
                 <Nav.Link className='ms-auto' as={Link} to="/admin/signup" >signup</Nav.Link>
                 <Nav.Link className='ms-auto' as={Link} to="/admin/signin" >signin</Nav.Link>
                 <Nav.Link className='ms-auto' as={Link} to="/admin/control" >control</Nav.Link>
+                
+                <Nav.Link className='ms-auto' as={Link} to="/admin/signin" >sign out</Nav.Link>
+
                 {/* <Nav.Link className='ms-auto' as={Link} to="/booking-form" >Booking Form</Nav.Link> */}
               </Nav>
             </Navbar.Collapse>
